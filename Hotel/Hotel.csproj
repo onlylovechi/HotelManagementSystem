@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3423F4EE-8C75-4453-B7F1-A2B40AFE9BB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel</RootNamespace>
+    <AssemblyName>Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\Download\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\CTPhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DAO\LoaiPhongDAO.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuDAO.cs" />
+    <Compile Include="DAO\PhieuDatPhong.cs" />
+    <Compile Include="DAO\PhieuDatPhongDAO.cs" />
+    <Compile Include="DAO\PhieuSuDungDichVuTourDAO.cs" />
+    <Compile Include="DAO\PhongCTDAO.cs" />
+    <Compile Include="DAO\TinhTrangPhongDAO.cs" />
+    <Compile Include="DTO\DICHVU.cs" />
+    <Compile Include="DTO\LOAIPHONG.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\PHIEUSUDUNGDICHVU.cs" />
+    <Compile Include="DTO\CTPhieuDatPhong.cs" />
+    <Compile Include="DTO\PHIEUDATPHONG.cs" />
+    <Compile Include="DTO\PHIEUSUDUNGDICHVUTOUR.cs" />
+    <Compile Include="DTO\PhongCT.cs" />
+    <Compile Include="DTO\Room.cs" />
+    <Compile Include="fCHECKIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCHECKIN.Designer.cs">
+      <DependentUpon>fCHECKIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCHECKIN_THANHCONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCHECKIN_THANHCONG.Designer.cs">
+      <DependentUpon>fCHECKIN_THANHCONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fCHECKOUT_HOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCHECKOUT_HOADON.Designer.cs">
+      <DependentUpon>fCHECKOUT_HOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDatPhong.Designer.cs" />
+    <Compile Include="TinhTrangPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TinhTrangPhong.Designer.cs">
+      <DependentUpon>TinhTrangPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fCHECKIN.resx">
+      <DependentUpon>fCHECKIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCHECKIN_THANHCONG.resx">
+      <DependentUpon>fCHECKIN_THANHCONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCHECKOUT_HOADON.resx">
+      <DependentUpon>fCHECKOUT_HOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TinhTrangPhong.resx">
+      <DependentUpon>TinhTrangPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sasha-kaunas-xEaAoizNFV8-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\logged-in.png" />
+    <Content Include="img\Picture1.png" />
+    <Content Include="img\Picture10.png" />
+    <Content Include="img\Picture11.png" />
+    <Content Include="img\Picture12.png" />
+    <Content Include="img\Picture13.png" />
+    <Content Include="img\Picture14.png" />
+    <Content Include="img\Picture15.png" />
+    <Content Include="img\Picture16.png" />
+    <Content Include="img\Picture17.png" />
+    <Content Include="img\Picture18.png" />
+    <Content Include="img\Picture19.png" />
+    <Content Include="img\Picture2.png" />
+    <Content Include="img\Picture4.png" />
+    <Content Include="img\Picture5.png" />
+    <Content Include="img\Picture6.png" />
+    <Content Include="img\Picture7.png" />
+    <Content Include="img\Picture8.png" />
+    <Content Include="img\Picture9.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\search %281%29.png" />
+    <None Include="Resources\refresh %281%29.png" />
+    <None Include="Resources\diskette.png" />
+    <Content Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HoaDon\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
